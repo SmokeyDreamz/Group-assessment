@@ -37,7 +37,7 @@ joinLine(5, 5, inEach); */
 joinLine(5,3,[2,2,3,3,3]) */
 
 
-//Food Lines Test
+//Food Lines Test Working Code - THIS IS THE FINAL - STUDY FOR TEST
 
 /* function joinLine(lines, peopleJoining, peopleWaiting) {
   while (peopleJoining > 0) {
@@ -52,14 +52,23 @@ joinLine(5,3,[2,2,3,3,3]) */
 }
 joinLine(5, 3, [2,2,2,3,3]) */
 
-//Alpaca Question
+//Alpaca Question    WIP - STUDY FOR TEST
+
 
 function happyAlpacas(alpacas, happyA){
-  let alpacalist = []
-  for (let i = 0; i < alpacas; i++){
-    if (alpacas[i] + alpacas[i+1] % 2 === 0 ){
-      alpacalist.push(1);
-      
-    }
+  let alpacaList = [];
+  for (let i = 0; i < alpacas; i++) {
+    alpacaList.push(0);
   }
+  while (happyA > 0){
+    for (let i = 0; i < alpacas; i++){
+      if (alpacas[i] + alpacas[i+1] % 2 === 0 && happyA > 0){
+        alpacaList[i] += 0;
+        happyA -= 1;
+      } else {
+        alpacaList[i] += 1;
+      }
+    }
+  } console.log(alpacaList);
 }
+happyAlpacas(6,4);

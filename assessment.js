@@ -55,9 +55,9 @@ joinLine(5, 3, [2,2,2,3,3]) */
 //Alpaca Question    WIP - STUDY FOR TEST
 
 
-function happyAlpacas(alpacas, happyA){
+/* function happyAlpacas(alpacas, happyA){
   let alpacaList = [];
-  for (let i = 0; i < alpacas; i++) {
+  for (let i = 0; i < happyA; i++) {
     alpacaList.push(0);
   }
   while (happyA > 0){
@@ -71,4 +71,20 @@ function happyAlpacas(alpacas, happyA){
     }
   } console.log(alpacaList);
 }
-happyAlpacas(6,4);
+happyAlpacas(6,4); */
+
+function happyAlpacas(alpacas, happyA){
+  if (happyA %2 === 0) {
+    let alpacaList = [];
+    for (let i = 0; i<happyA; i++){
+      alpacaList.push(0);
+    }
+    for (let i = 0; i < alpacas - happyA; i++) {
+      alpacaList.push(i%2);
+    }
+  return alpacaList
+  } else {
+    console.log("invalid");
+  }
+}
+console.log(happyAlpacas(6,4));

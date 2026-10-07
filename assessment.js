@@ -52,8 +52,6 @@ joinLine(5,3,[2,2,3,3,3]) */
 }
 joinLine(5, 3, [2,2,2,3,3]) */
 
-//Alpaca Question    WIP - STUDY FOR TEST
-
 
 /* function happyAlpacas(alpacas, happyA){
   let alpacaList = [];
@@ -73,18 +71,21 @@ joinLine(5, 3, [2,2,2,3,3]) */
 }
 happyAlpacas(6,4); */
 
+//Alpaca Question Working Code - THIS IS THE FINAL - STUDY FOR TEST
+
 function happyAlpacas(alpacas, happyA){
-  if (happyA %2 === 0) {
+  const unhappy = alpacas - happyA;
+  if (unhappy %2 === 0) {
     let alpacaList = [];
     for (let i = 0; i<happyA; i++){
       alpacaList.push(0);
     }
-    for (let i = 0; i < alpacas - happyA; i++) {
+    for (let i = 1; i <= unhappy; i++) {
       alpacaList.push(i%2);
     }
-  return alpacaList
+  console.log(alpacaList);
   } else {
-    console.log("invalid");
+    console.log("Not a valid amount of happy alpacas!!!");
   }
 }
-console.log(happyAlpacas(6,4));
+happyAlpacas(7,1);
